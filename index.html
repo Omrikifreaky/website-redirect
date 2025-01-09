@@ -2,14 +2,17 @@
 <html>
 <head>
     <title>Redirecting...</title>
-    <!-- Redirect to the YouTube link -->
-    <meta http-equiv="refresh" content="0; url=https://www.youtube.com/@sam_sulek">
     <script>
-        // For faster redirect in modern browsers
-        window.location.replace("https://www.youtube.com/@sam_sulek");
+        // Try to open YouTube app if possible
+        window.location.replace("youtube://www.youtube.com/@sam_sulek");
+        // If the app doesn't open, fall back to YouTube web
+        setTimeout(function() {
+            window.location.href = "https://www.youtube.com/@sam_sulek";
+        }, 1000); // Wait 1 second before fallback
     </script>
 </head>
 <body>
     <p>Redirecting to YouTube...</p>
 </body>
 </html>
+
