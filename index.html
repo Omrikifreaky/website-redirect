@@ -3,16 +3,17 @@
 <head>
     <title>Redirecting...</title>
     <script>
-        // Try to open YouTube app if possible
+        // Try opening the YouTube app
         window.location.replace("youtube://www.youtube.com/@sam_sulek");
-        // If the app doesn't open, fall back to YouTube web
+        // If it doesn't work, fall back to the YouTube website after 1 second
         setTimeout(function() {
             window.location.href = "https://www.youtube.com/@sam_sulek";
-        }, 1000); // Wait 1 second before fallback
+        }, 1000);
     </script>
 </head>
 <body>
     <p>Redirecting to YouTube...</p>
 </body>
 </html>
+
 
