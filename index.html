@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Redirecting...</title>
+    <title>Open in Safari</title>
     <script>
-        // Try opening the YouTube app
-        window.location.replace("youtube://www.youtube.com/@sam_sulek");
-        // If it doesn't work, fall back to the YouTube website after 1 second
-        setTimeout(function() {
-            window.location.href = "https://www.youtube.com/@sam_sulek";
-        }, 1000);
+        // Display a message suggesting the user opens in Safari
+        document.addEventListener("DOMContentLoaded", function () {
+            if (navigator.userAgent.includes("Instagram")) {
+                alert("For the best experience, please open this page in Safari!");
+            }
+        });
     </script>
 </head>
 <body>
-    <p>Redirecting to YouTube...</p>
+    <p>To open this link in Safari, tap the three dots (⋮) and choose "Open in Browser."</p>
 </body>
 </html>
 
