@@ -4,12 +4,20 @@
     <title>Redirecting to YouTube...</title>
     <script>
         window.onload = function () {
-            // Attempt to open the YouTube app
-            window.location.replace("youtube://www.youtube.com/watch?v=TDTQ52ISGqY");
-            // Fallback to the web version if the app isn't available
+            // Attempt to open the YouTube app using the deep link
+            var appUrl = "youtube://www.youtube.com/watch?v=TDTQ52ISGqY";
+            var webUrl = "https://www.youtube.com/watch?v=TDTQ52ISGqY";
+
+            // Create an invisible iframe to trigger the deep link
+            var iframe = document.createElement("iframe");
+            iframe.style.display = "none";
+            iframe.src = appUrl;
+            document.body.appendChild(iframe);
+
+            // Fallback to the web URL after a delay
             setTimeout(function () {
-                window.location.href = "https://www.youtube.com/watch?v=TDTQ52ISGqY";
-            }, 1000); // Wait 1 second before fallback
+                window.location.href = webUrl;
+            }, 1500);
         };
     </script>
 </head>
