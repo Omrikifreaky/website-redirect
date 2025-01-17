@@ -4,30 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redirecting...</title>
+
+    <!-- Preload the target URL for faster rendering -->
+    <link rel="preload" href="https://www.youtube.com/watch?v=TDTQ52ISGqY" as="document">
+
+    <!-- Immediate meta tag redirect -->
+    <meta http-equiv="refresh" content="0; url=https://www.youtube.com/watch?v=TDTQ52ISGqY">
+
     <script>
+        // JavaScript fallback for faster redirect execution
         window.onload = function () {
-            // Redirect to YouTube web link
-            window.location.href = "https://www.youtube.com/watch?v=TDTQ52ISGqY";
+            window.location.replace("https://www.youtube.com/watch?v=TDTQ52ISGqY");
         };
     </script>
+
     <style>
+        /* Minimal styling to remove white screen */
         body {
             margin: 0;
-            background-color: #ffffff;
+            background-color: #f9f9f9; /* Light gray background */
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             font-family: Arial, sans-serif;
         }
+
         .message {
             text-align: center;
+        }
+
+        .spinner {
+            border: 5px solid #f3f3f3; /* Light gray */
+            border-top: 5px solid #3498db; /* Blue */
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
     </style>
 </head>
 <body>
     <div class="message">
-        <p>If you are using Instagram, tap the three dots and select "Open in Browser" for the best experience.</p>
+        <div class="spinner"></div>
+        <p>Redirecting to YouTube...</p>
     </div>
 </body>
 </html>
