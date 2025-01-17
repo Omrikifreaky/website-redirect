@@ -4,29 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redirecting...</title>
-
-    <!-- Preload the target URL for faster rendering -->
-    <link rel="preload" href="https://www.youtube.com/watch?v=TDTQ52ISGqY" as="document">
-
     <script>
-        // Redirect as early as possible
         window.onload = function () {
-            window.location.replace("https://www.youtube.com/watch?v=TDTQ52ISGqY");
-            setTimeout(function () {
-                window.location.href = "https://www.youtube.com/watch?v=TDTQ52ISGqY";
-            }, 200); // Reduced delay
+            // Redirect to YouTube web link
+            window.location.href = "https://www.youtube.com/watch?v=TDTQ52ISGqY";
         };
     </script>
-
     <style>
-        /* Match YouTube's background */
         body {
             margin: 0;
-            background-color: #ffffff; /* White background to blend with YouTube */
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+        .message {
+            text-align: center;
         }
     </style>
 </head>
 <body>
+    <div class="message">
+        <p>If you are using Instagram, tap the three dots and select "Open in Browser" for the best experience.</p>
+    </div>
 </body>
 </html>
