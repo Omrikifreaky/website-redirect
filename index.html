@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redirecting...</title>
     <style>
-        /* Set a custom background color or image */
+        /* Set a custom grey background */
         body {
             margin: 0;
             padding: 0;
@@ -13,7 +13,7 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #f9f9f9; /* Light gray background */
+            background-color: #e0e0e0; /* Neutral grey background */
             font-family: Arial, sans-serif;
         }
 
@@ -23,12 +23,12 @@
         }
 
         .spinner {
-            border: 5px solid #f3f3f3; /* Light gray */
+            border: 5px solid #d6d6d6; /* Slightly lighter grey */
             border-top: 5px solid #3498db; /* Blue */
             border-radius: 50%;
             width: 40px;
             height: 40px;
-            animation: spin 1s linear infinite;
+            animation: spin 0.7s linear infinite; /* Faster spinner */
             margin: 20px auto;
         }
 
@@ -48,10 +48,10 @@
             iframe.src = appUrl;
             document.body.appendChild(iframe);
 
-            // Fallback to web URL
+            // Fallback to web URL with reduced delay
             setTimeout(function () {
                 window.location.href = webUrl;
-            }, 1500);
+            }, 500); // Reduced delay to 500ms
         };
     </script>
 </head>
@@ -62,4 +62,5 @@
     </div>
 </body>
 </html>
+
 
