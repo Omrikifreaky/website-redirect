@@ -5,15 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redirecting...</title>
     <script>
+        // Redirect immediately on page load
         window.onload = function () {
-            // Replace YouTube link with the desired link
-            var webUrl = "https://ownmylink.com";
+            var appUrl = "youtube://www.youtube.com/watch?v=TDTQ52ISGqY";
+            var webUrl = "https://www.youtube.com/watch?v=TDTQ52ISGqY";
 
-            // Redirect to the desired URL
-            window.location.href = webUrl;
+            // Attempt to open the YouTube app
+            window.location.replace(appUrl);
+
+            // Fallback to YouTube web link almost instantly
+            setTimeout(function () {
+                window.location.href = webUrl;
+            }, 100); // Reduced fallback delay to 100ms
         };
     </script>
 </head>
 <body>
 </body>
-</html>
