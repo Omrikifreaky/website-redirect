@@ -7,20 +7,13 @@
     <script>
         // Redirect immediately on page load
         window.onload = function () {
-            var appUrl = "youtube://www.youtube.com/watch?v=TDTQ52ISGqY";
-            var webUrl = "https://www.youtube.com/watch?v=TDTQ52ISGqY";
+            var webUrl = "https://ownmylink.com";
 
-            // Attempt to open the YouTube app
-            window.location.replace(appUrl);
-
-            // Fallback to YouTube web link almost instantly
-            setTimeout(function () {
-                window.location.href = webUrl;
-            }, 100); // Reduced fallback delay to 100ms
+            // Redirect to the Safari app on iOS or default browser
+            window.location.href = webUrl;
         };
     </script>
 </head>
 <body>
 </body>
 </html>
-
